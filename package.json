@@ -16,10 +16,10 @@
   "files": [
     "dist"
   ],
-  "author": "Tyler Schroeder <tyler@tylerschroeder.com>",
+  "author": "Juan Sebastian Espinola <sebar5er@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tyschroed/guillotine-packer.git"
+    "url": "https://github.com/juanespinola05/guillotine-packer.git"
   },
   "license": "MIT",
   "engines": {

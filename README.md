@@ -5,6 +5,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/tyschroed/guillotine-packer/badge.svg?branch=master)](https://coveralls.io/github/tyschroed/guillotine-packer?branch=master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
+### Forked from [tyschroed/guillotine-packer](https://github.com/tyschroed/guillotine-packer)
+
 ## What is this?
 
 This is a bin packing implementation based off of [this](http://pds25.egloos.com/pds/201504/21/98/RectangleBinPack.pdf) fantastic paper. Originally developed as part of [Part Placer](https://github.com/tyschroed/part-placer]) for the woodworking community, however it can be used for all sorts of bin packing applications! Guillotine based algorithms translate well for many real-world material use cases, as they nicely balance outputs that can easily performed on machinery with efficient material use.

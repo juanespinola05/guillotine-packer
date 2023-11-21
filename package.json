@@ -1,6 +1,6 @@
 {
   "name": "guillotine-packer-mlplak",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Guillotine based packing algorithm",
   "keywords": [
     "bin-packing",

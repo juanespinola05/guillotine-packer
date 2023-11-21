@@ -11,7 +11,8 @@ const rect = {
 
 const item = {
   width: 50,
-  height: 50
+  height: 50,
+  allowRotation: false
 }
 
 test('long axis split', () => {

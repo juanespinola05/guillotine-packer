@@ -2,7 +2,8 @@ import { GetSelectionImplementation, SelectionStrategy } from '../src/selection-
 
 const item1 = {
   width: 10,
-  height: 20
+  height: 20,
+  allowRotation: true
 }
 
 const rectangles = [

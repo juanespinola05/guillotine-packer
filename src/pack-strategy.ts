@@ -87,7 +87,7 @@ export function PackStrategy({
     const originalOption = getSelectionOption(item)
     let rotatedOption = null
     let rotatedItem
-    if (allowRotation) {
+    if (item.allowRotation) {
       rotatedItem = rotateItem(item)
       rotatedOption = getSelectionOption(rotatedItem)
     }
@@ -131,7 +131,7 @@ export function PackStrategy({
       }
       const { rectangle, splitRectangles } = selectedOption
       debug('selected rectangle', rectangle)
-      const { width, height, ...otherItemProps } = selectedOption.item
+      const { width, height, allowRotation, ...otherItemProps } = selectedOption.item
       const packedItem = {
         item: otherItemProps,
         width,

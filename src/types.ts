@@ -11,5 +11,6 @@ export type Rectangle = {
 export interface Item {
   width: number
   height: number
+  allowRotation: boolean
   [others: string]: any
 }

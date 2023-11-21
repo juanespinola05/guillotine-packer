@@ -6,7 +6,8 @@ test('pack item requiring rotation', () => {
     {
       name: 'test',
       width: 30,
-      height: 40
+      height: 40,
+      allowRotation: true
     } as Item
   ]
 
@@ -38,23 +39,28 @@ test('pack multiple bins', () => {
   const items = [
     {
       width: 4,
-      height: 3
+      height: 3,
+      allowRotation: true
     },
     {
       width: 4,
-      height: 3
+      height: 3,
+      allowRotation: true
     },
     {
       width: 4,
-      height: 3
+      height: 3,
+      allowRotation: true
     },
     {
       width: 4,
-      height: 3
+      height: 3,
+      allowRotation: true
     },
     {
       width: 4,
-      height: 3
+      height: 3,
+      allowRotation: true
     }
   ]
 
@@ -133,12 +139,14 @@ test('should rotate items if it results in more efficent packing', () => {
         {
           name: '40x20',
           width: 40,
-          height: 20
+          height: 20,
+          allowRotation: true
         } as Item,
         {
           name: '40x20',
           width: 40,
-          height: 20
+          height: 20,
+          allowRotation: true
         } as Item
       ]
     },
@@ -161,12 +169,14 @@ test('should not rotate items if allow rotation is disabled', () => {
         {
           name: '40x20',
           width: 40,
-          height: 20
+          height: 20,
+          allowRotation: false
         } as Item,
         {
           name: '40x20',
           width: 40,
-          height: 20
+          height: 20,
+          allowRotation: false
         } as Item
       ]
     },
@@ -190,12 +200,14 @@ test('create kerfs if provided', () => {
         {
           name: 'test',
           width: 20,
-          height: 20
+          height: 20,
+          allowRotation: true
         } as Item,
         {
           name: 'kerfed offcut',
           width: 5,
-          height: 5
+          height: 5,
+          allowRotation: true
         } as Item
       ]
     },
@@ -237,7 +249,8 @@ test('throw error if item too large for bin', () => {
       items: [
         {
           width: 40,
-          height: 40
+          height: 40,
+          allowRotation: true
         }
       ]
     })

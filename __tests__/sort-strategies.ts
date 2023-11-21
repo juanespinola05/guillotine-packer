@@ -2,11 +2,11 @@ import { GetSortImplementation, SortDirection, SortStrategy } from '../src/sort-
 
 test('area sort', () => {
   const testItems = [
-    { width: 10, height: 20 },
-    { width: 10, height: 10 },
-    { width: 10, height: 40 },
-    { width: 10, height: 30 },
-    { width: 10, height: 50 }
+    { width: 10, height: 20, allowRotation: true },
+    { width: 10, height: 10, allowRotation: true },
+    { width: 10, height: 40, allowRotation: true },
+    { width: 10, height: 30, allowRotation: true },
+    { width: 10, height: 50, allowRotation: true }
   ]
   const sorter = GetSortImplementation(SortStrategy.Area, SortDirection.ASC)
   const items = sorter.sort(testItems)
@@ -14,22 +14,27 @@ test('area sort', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 20,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 30,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 40,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 50,
     "width": 10,
   },
@@ -38,11 +43,11 @@ Array [
 })
 test('area sort DESC', () => {
   const testItems = [
-    { width: 10, height: 20 },
-    { width: 10, height: 10 },
-    { width: 10, height: 40 },
-    { width: 10, height: 30 },
-    { width: 10, height: 50 }
+    { width: 10, height: 20, allowRotation: true },
+    { width: 10, height: 10, allowRotation: true },
+    { width: 10, height: 40, allowRotation: true },
+    { width: 10, height: 30, allowRotation: true },
+    { width: 10, height: 50, allowRotation: true }
   ]
   const sorter = GetSortImplementation(SortStrategy.Area, SortDirection.DESC)
   const items = sorter.sort(testItems)
@@ -50,22 +55,27 @@ test('area sort DESC', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 50,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 40,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 30,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 20,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
@@ -75,11 +85,11 @@ Array [
 
 test('differences sort', () => {
   const testItems = [
-    { width: 10, height: 20 },
-    { width: 10, height: 10 },
-    { width: 10, height: 40 },
-    { width: 10, height: 30 },
-    { width: 10, height: 50 }
+    { width: 10, height: 20, allowRotation: true },
+    { width: 10, height: 10, allowRotation: true },
+    { width: 10, height: 40, allowRotation: true },
+    { width: 10, height: 30, allowRotation: true },
+    { width: 10, height: 50, allowRotation: true }
   ]
   const sorter = GetSortImplementation(SortStrategy.Differences, SortDirection.ASC)
   const items = sorter.sort(testItems)
@@ -87,22 +97,27 @@ test('differences sort', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 20,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 30,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 40,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 50,
     "width": 10,
   },
@@ -112,13 +127,13 @@ Array [
 
 test('long side sort', () => {
   const testItems = [
-    { width: 10, height: 20 },
-    { width: 10, height: 10 },
-    { width: 10, height: 40 },
-    { width: 10, height: 30 },
-    { width: 10, height: 50 },
-    { width: 15, height: 50 },
-    { width: 5, height: 50 }
+    { width: 10, height: 20, allowRotation: true },
+    { width: 10, height: 10, allowRotation: true },
+    { width: 10, height: 40, allowRotation: true },
+    { width: 10, height: 30, allowRotation: true },
+    { width: 10, height: 50, allowRotation: true },
+    { width: 15, height: 50, allowRotation: true },
+    { width: 5, height: 50, allowRotation: true}
   ]
   const sorter = GetSortImplementation(SortStrategy.LongSide, SortDirection.ASC)
   const items = sorter.sort(testItems)
@@ -126,30 +141,37 @@ test('long side sort', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 20,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 30,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 40,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 50,
     "width": 5,
   },
   Object {
+    "allowRotation": true,
     "height": 50,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 50,
     "width": 15,
   },
@@ -159,15 +181,15 @@ Array [
 
 test('short side sort', () => {
   const testItems = [
-    { width: 10, height: 10 },
-    { width: 10, height: 9 },
-    { width: 10, height: 8 },
-    { width: 10, height: 7 },
-    { width: 10, height: 6 },
-    { width: 10, height: 6 },
-    { width: 10, height: 7 },
-    { width: 11, height: 6 },
-    { width: 10, height: 6 }
+    { width: 10, height: 10, allowRotation: true },
+    { width: 10, height: 9, allowRotation: true },
+    { width: 10, height: 8, allowRotation: true },
+    { width: 10, height: 7, allowRotation: true },
+    { width: 10, height: 6, allowRotation: true },
+    { width: 10, height: 6, allowRotation: true },
+    { width: 10, height: 7, allowRotation: true },
+    { width: 11, height: 6, allowRotation: true },
+    { width: 10, height: 6, allowRotation: true }
   ]
   const sorter = GetSortImplementation(SortStrategy.ShortSide, SortDirection.ASC)
   const items = sorter.sort(testItems)
@@ -175,38 +197,47 @@ test('short side sort', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 6,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 6,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 6,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 6,
     "width": 11,
   },
   Object {
+    "allowRotation": true,
     "height": 7,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 7,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 8,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 9,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
@@ -216,10 +247,10 @@ Array [
 
 test('ratio sort', () => {
   const testItems = [
-    { width: 10, height: 10 },
-    { width: 10, height: 20 },
-    { width: 10, height: 40 },
-    { width: 10, height: 30 }
+    { width: 10, height: 10, allowRotation: true },
+    { width: 10, height: 20, allowRotation: true },
+    { width: 10, height: 40, allowRotation: true },
+    { width: 10, height: 30, allowRotation: true }
   ]
   const sorter = GetSortImplementation(SortStrategy.Ratio, SortDirection.ASC)
   const items = sorter.sort(testItems)
@@ -227,18 +258,22 @@ test('ratio sort', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 40,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 30,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 20,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
@@ -248,9 +283,9 @@ Array [
 
 test('perimeter sort', () => {
   const testItems = [
-    { width: 10, height: 10 },
-    { width: 30, height: 30 },
-    { width: 20, height: 20 }
+    { width: 10, height: 10, allowRotation: true },
+    { width: 30, height: 30, allowRotation: true },
+    { width: 20, height: 20, allowRotation: true }
   ]
 
   const sorter = GetSortImplementation(SortStrategy.Perimeter, SortDirection.ASC)
@@ -259,14 +294,17 @@ test('perimeter sort', () => {
   expect(items).toMatchInlineSnapshot(`
 Array [
   Object {
+    "allowRotation": true,
     "height": 10,
     "width": 10,
   },
   Object {
+    "allowRotation": true,
     "height": 20,
     "width": 20,
   },
   Object {
+    "allowRotation": true,
     "height": 30,
     "width": 30,
   },

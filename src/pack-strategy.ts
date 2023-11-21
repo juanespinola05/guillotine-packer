@@ -87,7 +87,7 @@ export function PackStrategy({
     const originalOption = getSelectionOption(item)
     let rotatedOption = null
     let rotatedItem
-    if (item.allowRotation) {
+    if (item.allowRotation ?? allowRotation) {
       rotatedItem = rotateItem(item)
       rotatedOption = getSelectionOption(rotatedItem)
     }
